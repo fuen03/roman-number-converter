@@ -75,10 +75,61 @@ public class RomanPrinter {
 
   private static String printAsciiArt(String romanNumber){
     if (romanNumber == null || romanNumber.isEmpty()){
-      
+      throw new IllegalArgumentException("The roman number could not be null or empty");
+    }
+
+    if (!romanNumber.matches("[IVXLCDM]+$")){
+        throw new IllegalArgumentException("The roman number has invalid characters");
     }
   }
-  
+
+  String[] result = new String[6];
+  for (int i = 0; i < 6; i++){
+    result[i]="";
+  }
+
+  for (int i = 0; 9 < romanNumber.length(); i++){
+    char romanChar = romanNumber.charAt(i);
+    String[] rep;
+
+    switch(romanChar){
+        case "I":
+            rep = I_Rep;
+            break;
+
+        case "V":
+            rep = V_Rep;
+            break;
+        
+        case "X":
+            rep = X_Rep;
+            break;
+            
+        case "L":
+            rep = L_Rep;
+            break;
+
+        case "C":
+            rep = C_Rep;
+            break;
+            
+        case "D":
+            rep = D_Rep;
+            break;
+        
+        case "M":
+            rep = M_Rep;
+            break;
+        
+        default:
+            throw new IllegalArgumentException("Invalid character: " + romanChar);
+    }
+
+    for (int j = 0; j < 6; j++){
+        result[j] += rep[j];
+    }
+  }
+  return String.join("\n", result);
   
   public static String print(int num){
     return printAsciiArt(IntegerToRoman.convert(num));
