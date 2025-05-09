@@ -1,7 +1,6 @@
 //Maria Fuensanta Trigueros Hernandez [2133487]
 //Alba Hui Larrosa Serrano [2133266]
 
-
 package it.unipd.mtss;
 public class RomanPrinter {
   private static final String[] I_Rep = {
@@ -26,56 +25,58 @@ public class RomanPrinter {
 
   private static final String[] X_Rep = {
     " ___    ___ ",
-    " \  \  /  /",
-    "  \  \/  /",
-    "   \    /",
-    "   /    \",
-    "  /  /\  \",
-    " /__/  \__\"
+    " \  \  /  / ",
+    "  \  \/  /  ",
+    "   \    /   ",
+    "   /    \   ",
+    "  /  /\  \  ",
+    " /__/  \__\ "
   };
 
   private static final String[] L_Rep = {
-    " __",
-    "|  |",
-    "|  |",
-    "|  |",
-    "|  |",
+    " __    ",
+    "|  |   ",
+    "|  |   ",
+    "|  |   ",
+    "|  |   ",
     "|  |_____",
     "|________|",
   };
 
   private static final String[] C_Rep = {
-    " ________",
-    "/  ______|",
-    "|  |",
-    "|  |",
-    "|  |",
-    "|  |______",
+    " ________  ",
+    "/  ______| ",
+    "|  |       ",
+    "|  |       ",
+    "|  |       ",
+    "|  |______ ",
     "\_________|"
   };
 
   private static final String[] D_Rep = {
-    " _______",
-    "|  ____  \",
-    "|  |  |  |",
-    "|  |  |  |",
-    "|  |  |  |",
-    "|  |__|  |",
-    "|_______ /"
+    " _______   ",
+    "|  ____  \ ",
+    "|  |  |  | ",
+    "|  |  |  | ",
+    "|  |  |  | ",
+    "|  |__|  | ",
+    "|_______ / "
   };
 
   private static final String[] M_Rep = {
-    " ___    ___",
-    "|   \  /   |",
-    "|    \/    |",
-    "|  |\  /|  |",
-    "|  | \/ |  |",
-    "|  |    |  |",
-    "|__|    |__|"
+    " ___    ___  ",
+    "|   \  /   | ",
+    "|    \/    | ",
+    "|  |\  /|  | ",
+    "|  | \/ |  | ",
+    "|  |    |  | ",
+    "|__|    |__| "
   };
 
   private static String printAsciiArt(String romanNumber){
-
+    if (romanNumber == null || romanNumber.isEmpty()){
+      
+    }
   }
   
   
