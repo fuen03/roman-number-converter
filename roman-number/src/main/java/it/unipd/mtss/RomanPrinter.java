@@ -15,21 +15,21 @@ public class RomanPrinter {
     };
 
     private static final String[] V_Rep = {
-        "___        ___",
+        "___       __",
         "\\ \\      / /",
         " \\ \\    / / ",
         "  \\ \\  / /  ",
         "   \\ \\/ /   ",
-        "    \\   /    ",
-        "     \\ /     "
+        "    \\  /    ",
+        "     \\/     "
     };
 
     private static final String[] X_Rep = {
-        " ___    ___ ",
+        " ___   __ ",
         " \\ \\  / / ",
         "  \\ \\/ /  ",
-        "   \\   /   ",
-        "   /   \\   ",
+        "   \\  /   ",
+        "   /  \\   ",
         "  / /\\ \\  ",
         " /_/  \\_\\ "
     };
@@ -65,13 +65,13 @@ public class RomanPrinter {
     };
 
     private static final String[] M_Rep = {
-        " ___    ___  ",
-        "|   \\  /   | ",
-        "|    \\/    | ",
-        "|  |\\  /|  | ",
-        "|  | \\/ |  | ",
-        "|  |     |  | ",
-        "|__|     |__| "
+        " __    __  ",
+        "|  \\  /  | ",
+        "|   \\/   | ",
+        "| |\\  /| | ",
+        "| | \\/ | | ",
+        "| |    | | ",
+        "|_|    |_| "
     };
 
     public static String print(int num) {
@@ -123,9 +123,11 @@ public class RomanPrinter {
             }
 
             for (int j = 0; j < 7; j++) {
-                result[j] += rep[j];
+                String padded = String.format("%-13s", rep[j]);
+                result[j] += padded;
             }
         }
+        
         return String.join("\n", result);
     }
 }
