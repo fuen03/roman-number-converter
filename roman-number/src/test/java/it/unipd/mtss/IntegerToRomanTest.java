@@ -75,6 +75,9 @@ public class IntegerToRomanTest {
     }
 
     // Cases 11-20
+
+
+    // Cases 21-49
     @Test
     public void testConvertForFortyNine() {
         int num = 49;
@@ -82,10 +85,6 @@ public class IntegerToRomanTest {
         String res = IntegerToRoman.convert(num);
         assertEquals("The number 49 has to be XLIX", exp, res);
     }
-
-
-    // Cases 21-49
-    
     
     // Cases 50-100
     @Test
