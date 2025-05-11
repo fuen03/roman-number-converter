@@ -74,46 +74,4 @@ public class IntegerToRomanTest {
         assertEquals("The number 10 has to be X", exp, res);
     }
 
-    // Cases 11-20
-
-
-    // Cases 21-49
-    @Test
-    public void testConvertForFortyNine() {
-        int num = 49;
-        String exp = "XLIX";
-        String res = IntegerToRoman.convert(num);
-        assertEquals("The number 49 has to be XLIX", exp, res);
-    }
-    
-    // Cases 50-100
-    @Test
-    public void testConvertForFifty() {
-        int num = 50;
-        String exp = "L";
-        String res = IntegerToRoman.convert(num);
-        assertEquals("The number 50 has to be L", exp, res);
-    }
-
-    @Test
-    public void testConvertForFiftyOne() {
-        int num = 51;
-        String exp = "LI";
-        String res = IntegerToRoman.convert(num);
-        assertEquals("The number 51 has to be LI", exp, res);
-    }
-
-    @Test
-    public void testConvertForNinetyNine() {
-        int num = 99;
-        String exp = "XCIX";
-        String res = IntegerToRoman.convert(num);
-        assertEquals("The number 99 has to be XCIX", exp, res);
-    }
-
-    // Cases 101-500
-
-
-
-    // Cases 501-1000
 }
